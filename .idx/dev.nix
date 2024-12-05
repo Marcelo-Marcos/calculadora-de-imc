@@ -1,8 +1,19 @@
 { pkgs, ... }: {
   channel = "stable-24.05";
+
   packages = [
-    pkgs.nodejs_20
+    pkgs.python311
   ];
-  env = {};
-  idx = {};
+
+  idx = {
+    previews = {
+      enable = true;
+      previews = {
+        web = {
+          command = ["python3" "-m" "http.server" "$PORT"];
+          manager = "web";
+        };
+      };
+    };
+  };
 }
