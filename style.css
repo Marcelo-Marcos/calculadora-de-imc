@@ -1,8 +1,8 @@
 @import url('reset.css');
 
 body {
-  background: linear-gradient(90.50deg,  #303c57 20%, #1A2130 40%, #1A2130 60%,
-  #303c57 70%, #1A2130 80%, #1A2130 100%);
+  background: linear-gradient(90.50deg,  #0C6DF5 20%, #1B31F5 40%, #0C23F5 60%,
+  #0CB6F5 70%, #1B31F5 80%, #0C6DF5 100%);
   display: flex;
   justify-content: center;
 }
@@ -22,7 +22,7 @@ body {
   height: 25vw;
   width: 50vw;
   gap: 20px;
-  background-color: #86858581;
+  background-color: #fff;
   box-shadow: 5px 5px 10px 2px rgba(134, 134, 134, 0.5);
   transition: 1s;
 }
@@ -35,7 +35,6 @@ body {
 .altura {
   width: 50%;
   font-size: 1.5rem;
-  border-radius: 10px;
   padding-left: 1%;
 }
 
@@ -89,7 +88,6 @@ input::placeholder {
   .altura {
     width: 59%;
     font-size: 1.2rem;
-    border-radius: 10px;
     padding-left: 1%;
   }
 

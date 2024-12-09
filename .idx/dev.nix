@@ -2,7 +2,7 @@
   channel = "stable-24.05";
 
   packages = [
-    pkgs.python311
+    pkgs.nodejs_20
   ];
 
   idx = {
@@ -10,10 +10,11 @@
       enable = true;
       previews = {
         web = {
-          command = ["python3" "-m" "http.server" "$PORT"];
+          command = ["npx" "live-server" "--port=$PORT" "--host=0.0.0.0"];
           manager = "web";
         };
       };
     };
   };
 }
+
