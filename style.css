@@ -79,7 +79,8 @@ input::placeholder {
   background-color: #547e6b;
 }
 
-.caixa__lista {
+#caixa__lista {
+  display: none;
   width: 100%;
 }
 
@@ -151,4 +152,3 @@ li {
     font-size: 1.2rem;
   }
 }
-
