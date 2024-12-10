@@ -14,21 +14,19 @@ function obesidade (valorObesidade) {
 }
 
 function calculoImcPesoIdeal (Peso, Altura) {
-    
+
     let peso = Peso;
     let altura = Altura / 100;
     let imc = peso / (altura * altura);
 
-    console.log(imc);
-
     if (imc < 18.5){
 
-        for (let i = 0; i < imc; i++) {
-            
+        for (let i = 0; i < 1000; i++) {
+
             peso += 0.5;
             imc = peso / (altura * altura);
 
-            if (imc >= 19) {
+            if (imc >= 18.5) {
                 peso += 0.5;
                 imc = peso / (altura * altura);
                 break;
@@ -37,23 +35,23 @@ function calculoImcPesoIdeal (Peso, Altura) {
             metricaideal(imc, peso);
         }
     }
-    else if (imc > 24.9 && imc < 50){
+    else if (imc > 24.99){
 
-        for (let i = 0; i < imc; i++) {
-            
+        for (let i = 0; i < 1000; i++) {
+
             peso -= 0.5;
             imc = peso / (altura * altura);
 
-            if (imc <= 24) {
+            if (imc < 25) {
 
-                peso -= 0.5;
+                peso -= 0.1;
                 imc = peso / (altura * altura);
                 break;
             }
-            console.log(peso,imc);
-            metricaideal(imc, peso);
         }
     }
+    //console.log(peso,imc);
+    metricaideal(imc, peso);
 }
 
 function mostraImc (valorImc) {
@@ -80,9 +78,9 @@ function mostraImc (valorImc) {
         corDoTexto.style.color = '#FFB200';
         return `O seu IMC é ${valorImc.toFixed(2)} e você está ${estatistica}`;
     }
-    else if (valorImc < 40 && valorImc > 30){
+    else if (valorImc > 30){
         let corDoTexto = document.getElementById('mensagem-exibida');
-        corDoTexto.style.color = 'FF2929';
+        corDoTexto.style.color = '#FF2929';
         return `O seu IMC é ${valorImc.toFixed(2)} e você está ${estatistica}`;
     } else {
         let corDoTexto = document.getElementById('mensagem-exibida');
@@ -110,7 +108,7 @@ function calculaImc (peso, altura) {
 function metricaAtual (imcMetricaAtual, pesoMetricaAtual) {
     const listaImcAtual = document.querySelector('.seu-imc');
     const listaPesoAtual = document.querySelector('.seu-peso');
-    
+
     listaImcAtual.innerHTML = imcMetricaAtual.toFixed(2);
     listaPesoAtual.innerHTML = `${pesoMetricaAtual}kg`;
 
@@ -120,7 +118,7 @@ function metricaAtual (imcMetricaAtual, pesoMetricaAtual) {
 function metricaideal (imcMetricaIdeal, pesoMetricaIdeal) {
     const listaImcIdeal = document.querySelector('.ideal-imc');
     const listaPesoIdeal = document.querySelector('.ideal-peso');
-    
+
     listaImcIdeal.innerHTML = imcMetricaIdeal.toFixed(2);
     listaPesoIdeal.innerHTML = `${pesoMetricaIdeal}kg`;
 }
