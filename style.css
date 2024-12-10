@@ -7,9 +7,18 @@ body {
   justify-content: center;
 }
 
+.caixa__titulo {
+  text-align: center;
+  background-color: #0b7748;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+  border: transperent;
+}
+
 .titulo {
   font-size: 2rem;
-  text-shadow: 5px 5px 10px rgba(134, 134, 134, 1);
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+  color: #FFFF;
 }
 
 .calculadora {
@@ -17,18 +26,31 @@ body {
   flex-direction: column;
   align-items: center;
   border: 2px solid #000000;
+  border-radius: 25px;
   margin-top: 10% ;
-  padding: 3% 3%;
+  /*padding: 3% 3%;*/
   height: 25vw;
   width: 50vw;
   gap: 20px;
   background-color: #fff;
-  box-shadow: 5px 5px 10px 2px rgba(134, 134, 134, 0.5);
+  box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.5);
   transition: 1s;
 }
 
 .calculadora:hover {
-  box-shadow: 5px 5px 10px 2px rgba(134, 134, 134, 1);
+  box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 1);
+}
+
+.caixa__principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 40px 40px 0 0;
+  border-top: 3px solid #000000;
+  padding: 5% 3% 3% 3%;
+  background-color: #fff;
+  margin-top: 10%;
 }
 
 .peso,
@@ -55,6 +77,20 @@ input::placeholder {
 
 .botao:hover {
   background-color: #547e6b;
+}
+
+.caixa__lista {
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  border: 2px solid black;
+  width: 30%;
 }
 
 #mensagem-exibida {
@@ -106,3 +142,4 @@ input::placeholder {
     margin-top: 25%;
   }
 }
+
