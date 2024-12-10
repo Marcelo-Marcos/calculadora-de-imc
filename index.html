@@ -15,17 +15,25 @@
       <div class="caixa__principal">
         <input class="peso" name="peso" type="number" placeholder="Digite seu peso" />
         <input class="altura" name="altura" type="number" placeholder="Digite sua altura em CM" />
+        <button onclick="registraImc()" class="botao">Calcular</button>
       </div>
-    </div>
-     <button onclick="registraImc()" class="botao">Calcular</button>
+    </div>  
     <div class="caixa__lista">
     <ul>
-      <li>A</li>
-      <li>B</li>
+      <li class="lista__cabecalho">Seu IMC</li>
+      <li class="lista__cabecalho">Seu Peso</li>
     </ul>
     <ul>
-      <li>1</li>
-      <li>2</li>
+      <li class="lista__texto seu-imc"></li>
+      <li class="lista__texto seu-peso"></li>
+    </ul>
+    <ul>
+      <li class="lista__cabecalho">IMC ideal</li>
+      <li class="lista__cabecalho">Peso ideal</li>
+    </ul>
+    <ul>
+      <li class="lista__texto ideal-imc"></li>
+      <li class="lista__texto ideal-peso"></li>
     </ul>
     </div>
     <p id="mensagem-exibida"></p>

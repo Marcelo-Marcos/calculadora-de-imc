@@ -19,6 +19,7 @@ body {
   font-size: 2rem;
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
   color: #FFFF;
+  margin-top: 5%;
 }
 
 .calculadora {
@@ -28,7 +29,6 @@ body {
   border: 2px solid #000000;
   border-radius: 25px;
   margin-top: 10% ;
-  /*padding: 3% 3%;*/
   height: 25vw;
   width: 50vw;
   gap: 20px;
@@ -90,7 +90,17 @@ ul {
 
 li {
   border: 2px solid black;
-  width: 30%;
+  width: 40%;
+}
+
+.lista__cabecalho {
+  font-size: 1.3rem;
+  line-height: 1.5em;
+}
+
+.lista__texto {
+  font-size: 1.1rem;
+  line-height: 1.5em;
 }
 
 #mensagem-exibida {
@@ -139,7 +149,6 @@ li {
 
   #mensagem-exibida {
     font-size: 1.2rem;
-    margin-top: 25%;
   }
 }
 
