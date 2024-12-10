@@ -14,19 +14,19 @@ function obesidade (valorObesidade) {
 }
 
 function calculoImcPesoIdeal (Peso, Altura) {
-
+    let contador = 10;
     let peso = Peso;
     let altura = Altura / 100;
     let imc = peso / (altura * altura);
 
     if (imc < 18.5){
 
-        for (let i = 0; i < 1000; i++) {
-
+        for (let i = 0; i < contador; i++) {
+            contador ++;
             peso += 0.5;
             imc = peso / (altura * altura);
 
-            if (imc >= 18.5) {
+            if (imc >= 18.6) {
                 peso += 0.5;
                 imc = peso / (altura * altura);
                 break;
@@ -37,18 +37,22 @@ function calculoImcPesoIdeal (Peso, Altura) {
     }
     else if (imc > 24.99){
 
-        for (let i = 0; i < 1000; i++) {
-
-            peso -= 0.5;
+        for (let i = 0; i < contador; i++) {
+            
+            contador ++;
+            peso -= 0.001;
             imc = peso / (altura * altura);
 
-            if (imc < 25) {
+            if (imc < 24.4) {
 
-                peso -= 0.1;
+                peso -= 0.001;
                 imc = peso / (altura * altura);
                 break;
             }
         }
+    } else {
+        imc = 0;
+        peso = 0;
     }
     //console.log(peso,imc);
     metricaideal(imc, peso);
@@ -109,9 +113,16 @@ function metricaAtual (imcMetricaAtual, pesoMetricaAtual) {
     const listaImcAtual = document.querySelector('.seu-imc');
     const listaPesoAtual = document.querySelector('.seu-peso');
 
-    listaImcAtual.innerHTML = imcMetricaAtual.toFixed(2);
-    listaPesoAtual.innerHTML = `${pesoMetricaAtual}kg`;
-
+    if (isNaN(listaImcAtual)) {
+        listaImcAtual.innerHTML = 0.00;
+        listaPesoAtual.innerHTML = `0kg`;
+    } else {
+        listaImcAtual.innerHTML = imcMetricaAtual.toFixed(2);
+        listaPesoAtual.innerHTML = `${pesoMetricaAtual}kg`;
+    }
+    
+    let corDoTexto = document.getElementById('caixa__lista');
+        corDoTexto.style.display = 'block';
     limpaDados();
 }
 
