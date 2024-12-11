@@ -50,12 +50,12 @@ function calculoImcPesoIdeal (Peso, Altura) {
                 break;
             }
         }
-    } else {
+    } else if (isNaN) {
         imc = 0;
         peso = 0;
     }
     //console.log(peso,imc);
-    metricaideal(imc, peso);
+    metricaideal(imc, peso.toFixed(2));
 }
 
 function mostraImc (valorImc) {
@@ -113,16 +113,13 @@ function metricaAtual (imcMetricaAtual, pesoMetricaAtual) {
     const listaImcAtual = document.querySelector('.seu-imc');
     const listaPesoAtual = document.querySelector('.seu-peso');
 
-    if (isNaN(listaImcAtual)) {
-        listaImcAtual.innerHTML = 0.00;
-        listaPesoAtual.innerHTML = `0kg`;
-    } else {
-        listaImcAtual.innerHTML = imcMetricaAtual.toFixed(2);
-        listaPesoAtual.innerHTML = `${pesoMetricaAtual}kg`;
-    }
+
+    listaImcAtual.innerHTML = imcMetricaAtual.toFixed(2);
+    listaPesoAtual.innerHTML = `${pesoMetricaAtual}kg`;
     
     let corDoTexto = document.getElementById('caixa__lista');
-        corDoTexto.style.display = 'block';
+    corDoTexto.style.display = 'block';
+
     limpaDados();
 }
 
