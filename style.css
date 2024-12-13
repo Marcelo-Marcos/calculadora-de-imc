@@ -6,7 +6,9 @@ body {
   background: linear-gradient(90.50deg,  #0C6DF5 20%, #1B31F5 40%, #0C23F5 60%,
   #0CB6F5 70%, #1B31F5 80%, #0C6DF5 100%);
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 500px;
 }
 
@@ -114,20 +116,30 @@ li {
 
 .lista__cabecalho {
   font-size: 1.1rem;
+  font-weight: 600;
   line-height: 1.5em;
   background-color: #ebe9e9;
 }
 
 .lista__texto {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5em;
+}
+
+.seu-peso,
+.seu-imc {
+  display: flex;
+  text-align: center;
+  background-color: #FFB200;
 }
 
 .ideal-peso,
 .ideal-imc {
   display: flex;
   text-align: center;
+  color: #FFF;
+  background-color: #547e6b;
 }
 
 #mensagem-exibida {
@@ -140,3 +152,5 @@ li {
   background-color: #ebe9e9;
   border-radius: 20px;
 }
+
+
