@@ -34,7 +34,7 @@ function mostraImc (valorImc) {
 
         let corDoTexto = document.getElementById('mensagem-exibida');
         corDoTexto.style.color = '#FF2929';
-        corDoTexto.style.padding = '3% 3%';
+        corDoTexto.style.padding = '5% 5%';
 
         return `Digite a altura em CM e o peso para calcular o IMC`; 
     } 
@@ -86,7 +86,7 @@ function metricaAtual (imcMetricaAtual, pesoMetricaAtual) {
 
     listaImcAtual.innerHTML = imcMetricaAtual.toFixed(2);
     listaPesoAtual.innerHTML = `${pesoMetricaAtual}kg`;
-    
+
     let listaDados = document.getElementById('caixa__lista');
     listaDados.style.display = 'block';
 
