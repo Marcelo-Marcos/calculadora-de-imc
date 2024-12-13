@@ -13,49 +13,11 @@ function obesidade (valorObesidade) {
     return estatistica;
 }
 
-function calculoImcPesoIdeal (Peso, Altura) {
-    let contador = 10;
-    let peso = Peso;
-    let altura = Altura / 100;
-    let imc = peso / (altura * altura);
+function calculoImcPesoIdeal (Altura) {
+    const altura = Altura / 100;
+    const pesoIdeal = 24.99 * (altura * altura);
 
-    if (imc < 18.5){
-
-        for (let i = 0; i < contador; i++) {
-            contador ++;
-            peso += 0.5;
-            imc = peso / (altura * altura);
-
-            if (imc >= 18.6) {
-                peso += 0.5;
-                imc = peso / (altura * altura);
-                break;
-            }
-            console.log(peso,imc);
-            metricaideal(imc, peso);
-        }
-    }
-    else if (imc > 24.99){
-
-        for (let i = 0; i < contador; i++) {
-            
-            contador ++;
-            peso -= 0.001;
-            imc = peso / (altura * altura);
-
-            if (imc < 24.4) {
-
-                peso -= 0.001;
-                imc = peso / (altura * altura);
-                break;
-            }
-        }
-    } else if (isNaN) {
-        imc = 0;
-        peso = 0;
-    }
-    //console.log(peso,imc);
-    metricaideal(imc, peso.toFixed(2));
+    metricaideal(pesoIdeal.toFixed(2));
 }
 
 function mostraImc (valorImc) {
@@ -66,29 +28,37 @@ function mostraImc (valorImc) {
     const estatistica = abaixoPeso? 'abaixo do peso': pesoNormal?'com o peso normal':
           sobrePeso?'com sobrepeso': `com obesidade grau ${obeso}`;
 
-    if (isNaN(valorImc)) {    
+    if (isNaN(valorImc) || valorImc === Infinity) {    
+        let listaDados = document.getElementById('caixa__lista');
+        listaDados.style.display = 'none';
+
         let corDoTexto = document.getElementById('mensagem-exibida');
         corDoTexto.style.color = '#FF2929';
         corDoTexto.style.padding = '3% 3%';
+
         return `Digite a altura em CM e o peso para calcular o IMC`; 
     } 
     else if (valorImc < 18.5){
         let corDoTexto = document.getElementById('mensagem-exibida');
         corDoTexto.style.color = '#FFB200';
+
         return `O seu IMC é ${valorImc.toFixed(2)} e você está ${estatistica}`;
     }
     else if (valorImc < 30 && valorImc > 25){
         let corDoTexto = document.getElementById('mensagem-exibida');
         corDoTexto.style.color = '#FFB200';
+
         return `O seu IMC é ${valorImc.toFixed(2)} e você está ${estatistica}`;
     }
     else if (valorImc > 30){
         let corDoTexto = document.getElementById('mensagem-exibida');
         corDoTexto.style.color = '#FF2929';
+
         return `O seu IMC é ${valorImc.toFixed(2)} e você está ${estatistica}`;
     } else {
         let corDoTexto = document.getElementById('mensagem-exibida');
         corDoTexto.style.color = '#0b7748';
+
         return `O seu IMC é ${valorImc.toFixed(2)} e você está ${estatistica}`;
     }
 
@@ -117,17 +87,17 @@ function metricaAtual (imcMetricaAtual, pesoMetricaAtual) {
     listaImcAtual.innerHTML = imcMetricaAtual.toFixed(2);
     listaPesoAtual.innerHTML = `${pesoMetricaAtual}kg`;
     
-    let corDoTexto = document.getElementById('caixa__lista');
-    corDoTexto.style.display = 'block';
+    let listaDados = document.getElementById('caixa__lista');
+    listaDados.style.display = 'block';
 
     limpaDados();
 }
 
-function metricaideal (imcMetricaIdeal, pesoMetricaIdeal) {
+function metricaideal (pesoMetricaIdeal) {
     const listaImcIdeal = document.querySelector('.ideal-imc');
     const listaPesoIdeal = document.querySelector('.ideal-peso');
 
-    listaImcIdeal.innerHTML = imcMetricaIdeal.toFixed(2);
+    listaImcIdeal.innerHTML = 'Maior que 18.5 e menor que 25';
     listaPesoIdeal.innerHTML = `${pesoMetricaIdeal}kg`;
 }
 
@@ -136,5 +106,5 @@ function registraImc () {
     let altura = document.querySelector('.altura').value;
 
     calculaImc(peso, altura);
-    calculoImcPesoIdeal(peso, altura);
+    calculoImcPesoIdeal(altura);
 }

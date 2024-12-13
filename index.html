@@ -13,8 +13,14 @@
     <div class="caixa__titulo">
       <h1 class="titulo">Calculadora de IMC</h1>   
       <div class="caixa__principal">
-        <input class="peso" name="peso" type="number" placeholder="Digite seu peso" />
-        <input class="altura" name="altura" type="number" placeholder="Digite sua altura em CM" />
+        <div class="caixa__secundaria">
+          <label>Peso (Kg)</label>
+          <input class="peso" name="peso" type="number" placeholder="Digite seu peso" />
+        </div>
+        <div class="caixa__secundaria">
+          <label>Altura (cm)</label>
+          <input class="altura" name="altura" type="number" placeholder="Digite sua altura" />
+        </div>
         <button onclick="registraImc()" class="botao">Calcular</button>
       </div>
     </div>  

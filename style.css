@@ -5,6 +5,7 @@ body {
   #0CB6F5 70%, #1B31F5 80%, #0C6DF5 100%);
   display: flex;
   justify-content: center;
+  height: 500px;
 }
 
 .caixa__titulo {
@@ -53,6 +54,13 @@ body {
   margin-top: 10%;
 }
 
+.caixa__secundaria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+
 .peso,
 .altura {
   width: 50%;
@@ -90,18 +98,29 @@ ul {
 }
 
 li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px solid black;
   width: 40%;
 }
 
 .lista__cabecalho {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.5em;
+  background-color: #ebe9e9;
 }
 
 .lista__texto {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
   line-height: 1.5em;
+}
+
+.ideal-peso,
+.ideal-imc {
+  display: flex;
+  text-align: center;
 }
 
 #mensagem-exibida {
@@ -117,9 +136,6 @@ li {
 
 /*Mobile*/
 @media screen and (max-width: 400px) {
-  body {
-    height: 500px;
-  }
 
   .titulo {
     font-size: 1.5rem;
