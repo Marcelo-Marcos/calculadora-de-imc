@@ -1,110 +1,156 @@
-function limpaDados ()  {
-    const limparPeso = document.querySelector('.peso');
-    const limparAltura = document.querySelector('.altura');
-    limparPeso.value = '';
-    limparAltura.value = '';
+@import url('reset.css');
+
+
+/* Estilização da página para mobile*/
+body {
+  background: linear-gradient(90.50deg,  #0C6DF5 20%, #1B31F5 40%, #0C23F5 60%,
+  #0CB6F5 70%, #1B31F5 80%, #0C6DF5 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
 }
 
-function obesidade (valorObesidade) {
-    const obesidadeGrau1 = valorObesidade < 35,
-          obesidadeGrau2 = valorObesidade < 40,
-          estatistica = obesidadeGrau1?'1': obesidadeGrau2?'2': '3';
-
-    return estatistica;
+.caixa__titulo {
+  text-align: center;
+  background-color: #0b7748;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
 }
 
-function calculoImcPesoIdeal (Altura) {
-    const altura = Altura / 100;
-    const pesoIdeal = 24.99 * (altura * altura);
-
-    metricaideal(pesoIdeal.toFixed(2));
+.titulo {
+  font-size: 1.5rem;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+  color: #FFFF;
+  margin-top: 5%;
 }
 
-function mostraImc (valorImc) {
-    const obeso = obesidade(valorImc);
-    const abaixoPeso = valorImc < 18.5,
-          pesoNormal = valorImc < 25,
-          sobrePeso = valorImc < 30;
-    const estatistica = abaixoPeso? 'abaixo do peso': pesoNormal?'com o peso normal':
-          sobrePeso?'com sobrepeso': `com obesidade grau ${obeso}`;
 
-    if (isNaN(valorImc) || valorImc === Infinity) {    
-        let listaDados = document.getElementById('caixa__lista');
-        listaDados.style.display = 'none';
-
-        let corDoTexto = document.getElementById('mensagem-exibida');
-        corDoTexto.style.color = '#FF2929';
-        corDoTexto.style.padding = '5% 5%';
-
-        return `Digite a altura em CM e o peso para calcular o IMC`; 
-    } 
-    else if (valorImc < 18.5){
-        let corDoTexto = document.getElementById('mensagem-exibida');
-        corDoTexto.style.color = '#FFB200';
-
-        return `O seu IMC é ${valorImc.toFixed(2)} e você está ${estatistica}`;
-    }
-    else if (valorImc < 30 && valorImc > 25){
-        let corDoTexto = document.getElementById('mensagem-exibida');
-        corDoTexto.style.color = '#FFB200';
-
-        return `O seu IMC é ${valorImc.toFixed(2)} e você está ${estatistica}`;
-    }
-    else if (valorImc > 30){
-        let corDoTexto = document.getElementById('mensagem-exibida');
-        corDoTexto.style.color = '#FF2929';
-
-        return `O seu IMC é ${valorImc.toFixed(2)} e você está ${estatistica}`;
-    } else {
-        let corDoTexto = document.getElementById('mensagem-exibida');
-        corDoTexto.style.color = '#0b7748';
-
-        return `O seu IMC é ${valorImc.toFixed(2)} e você está ${estatistica}`;
-    }
-
-
+.calculadora {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #000000;
+  border-radius: 25px;
+  height: 100%;
+  width: 80vw;
+  margin-top: 10%;
+  gap: 10px;
+  background-color: #fff;
+  box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.5);
+  transition: 1s;
 }
 
-function atualizaResultadoNaTela (valorImcCalculado) {
-    const resultadoCalculo = mostraImc(valorImcCalculado);
-    const imc = document.querySelector('p');
-    imc.innerHTML = resultadoCalculo;
+.calculadora:hover {
+  box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 1);
 }
 
-function calculaImc (peso, altura) {
-    altura = altura / 100;
-    const resultado = peso / (altura * altura);
-
-    metricaAtual(resultado, peso);
-    atualizaResultadoNaTela(resultado);
+.caixa__principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 40px 40px 0 0;
+  border-top: 3px solid #000000;
+  padding: 5% 3% 3% 3%;
+  background-color: #fff;
+  margin-top: 10%;
 }
 
-function metricaAtual (imcMetricaAtual, pesoMetricaAtual) {
-    const listaImcAtual = document.querySelector('.seu-imc');
-    const listaPesoAtual = document.querySelector('.seu-peso');
-
-
-    listaImcAtual.innerHTML = imcMetricaAtual.toFixed(2);
-    listaPesoAtual.innerHTML = `${pesoMetricaAtual}kg`;
-
-    let listaDados = document.getElementById('caixa__lista');
-    listaDados.style.display = 'block';
-
-    limpaDados();
+.caixa__secundaria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
 }
 
-function metricaideal (pesoMetricaIdeal) {
-    const listaImcIdeal = document.querySelector('.ideal-imc');
-    const listaPesoIdeal = document.querySelector('.ideal-peso');
-
-    listaImcIdeal.innerHTML = 'Maior que 18.5 e menor que 25';
-    listaPesoIdeal.innerHTML = `${pesoMetricaIdeal}kg`;
+span {
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-function registraImc () {
-    let peso = document.querySelector('.peso').value;
-    let altura = document.querySelector('.altura').value;
-
-    calculaImc(peso, altura);
-    calculoImcPesoIdeal(altura);
+.peso,
+.altura {
+  width: 59%;
+  font-size: 1.2rem;
+  padding-left: 1%;
 }
+
+input::placeholder {
+  padding-left: 1%;
+}
+
+.botao {
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 40%;
+  border: 1px solid #000000;
+  background-color: #0b7748;
+  color: #FFFF;
+  border-radius: 2px;
+  transition: 1s;
+}
+
+.botao:hover {
+  background-color: #547e6b;
+}
+
+#caixa__lista {
+  display: none;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid black;
+  width: 40%;
+}
+
+.lista__cabecalho {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5em;
+  background-color: #ebe9e9;
+}
+
+.lista__texto {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+.seu-peso,
+.seu-imc {
+  display: flex;
+  text-align: center;
+  background-color: #FFB200;
+}
+
+.ideal-peso,
+.ideal-imc {
+  display: flex;
+  text-align: center;
+  color: #FFF;
+  background-color: #547e6b;
+}
+
+#mensagem-exibida {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: italic;
+  width: 95%;
+  text-align: center;
+  margin-top: 0;
+  background-color: #ebe9e9;
+  border-radius: 20px;
+}
+
