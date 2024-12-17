@@ -15,7 +15,7 @@ function obesidade (valorObesidade) {
 
 function calculoImcPesoIdeal (Altura) {
     const altura = Altura / 100;
-    const pesoIdeal = 24.99 * (altura * altura);
+    const pesoIdeal = 24.9 * (altura * altura);
 
     metricaideal(pesoIdeal.toFixed(2));
 }
