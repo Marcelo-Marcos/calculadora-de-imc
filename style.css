@@ -6,8 +6,10 @@ body {
   background: linear-gradient(90.50deg,  #0C6DF5 20%, #1B31F5 40%, #0C23F5 60%,
   #0CB6F5 70%, #1B31F5 80%, #0C6DF5 100%);
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 500px;
+  align-items: center;
+  height: 400px;
 }
 
 .caixa__titulo {
@@ -31,9 +33,9 @@ body {
   align-items: center;
   border: 2px solid #000000;
   border-radius: 25px;
-  height: 97%;
+  height: 100%;
   width: 80vw;
-  margin-top: 20%;
+  margin-top: 10%;
   gap: 10px;
   background-color: #fff;
   box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.5);
@@ -108,26 +110,37 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   border: 2px solid black;
   width: 40%;
 }
 
 .lista__cabecalho {
   font-size: 1.1rem;
+  font-weight: 600;
   line-height: 1.5em;
   background-color: #ebe9e9;
 }
 
 .lista__texto {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5em;
+}
+
+.seu-peso,
+.seu-imc {
+  display: flex;
+  text-align: center;
+  background-color: #FFB200;
 }
 
 .ideal-peso,
 .ideal-imc {
   display: flex;
   text-align: center;
+  color: #FFF;
+  background-color: #547e6b;
 }
 
 #mensagem-exibida {
@@ -140,3 +153,4 @@ li {
   background-color: #ebe9e9;
   border-radius: 20px;
 }
+

@@ -15,7 +15,7 @@ function obesidade (valorObesidade) {
 
 function calculoImcPesoIdeal (Altura) {
     const altura = Altura / 100;
-    const pesoIdeal = 24.99 * (altura * altura);
+    const pesoIdeal = 24.9 * (altura * altura);
 
     metricaideal(pesoIdeal.toFixed(2));
 }
@@ -31,10 +31,14 @@ function mostraImc (valorImc) {
     if (isNaN(valorImc) || valorImc === Infinity) {    
         let listaDados = document.getElementById('caixa__lista');
         listaDados.style.display = 'none';
+        
+        const corpoDocumento = document.querySelector('body');
+        corpoDocumento.style.height = '400px';
+
 
         let corDoTexto = document.getElementById('mensagem-exibida');
         corDoTexto.style.color = '#FF2929';
-        corDoTexto.style.padding = '3% 3%';
+        corDoTexto.style.padding = '5% 5%';
 
         return `Digite a altura em CM e o peso para calcular o IMC`; 
     } 
@@ -82,11 +86,13 @@ function calculaImc (peso, altura) {
 function metricaAtual (imcMetricaAtual, pesoMetricaAtual) {
     const listaImcAtual = document.querySelector('.seu-imc');
     const listaPesoAtual = document.querySelector('.seu-peso');
+    const corpoDocumento = document.querySelector('body');
+    corpoDocumento.style.height = '600px';
 
 
     listaImcAtual.innerHTML = imcMetricaAtual.toFixed(2);
     listaPesoAtual.innerHTML = `${pesoMetricaAtual}kg`;
-    
+
     let listaDados = document.getElementById('caixa__lista');
     listaDados.style.display = 'block';
 
