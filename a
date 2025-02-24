@@ -1,0 +1,117 @@
+[33mcommit 38b97a78d0bb97f6506669550e22de25261e9c6b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: marcelomarcos.g9 <marcelomarcos.g9@gmail.com>
+Date:   Sat Feb 22 15:09:47 2025 +0000
+
+    Adicionando opção para selecionar o sexo
+
+[33mcommit 8db6e17af69a5bf80d1d993fb146e06f9f79a6c7[m
+Author: marcelomarcos.g9 <marcelomarcos.g9@gmail.com>
+Date:   Fri Dec 13 02:49:16 2024 +0000
+
+    Projeto final
+
+[33mcommit 988bdf4bb72a9c3df01d8869cdf252fe60687c9d[m
+Author: marcelomarcos.g9 <marcelomarcos.g9@gmail.com>
+Date:   Fri Dec 13 02:29:55 2024 +0000
+
+    Finalizando projeto
+
+[33mcommit f9750bac4b6bf6d0160be00bbc3cea42aedc91b6[m
+Author: marcelomarcos.g9 <marcelomarcos.g9@gmail.com>
+Date:   Wed Dec 11 00:52:47 2024 +0000
+
+    Aumento da calculadora e mudança da cor de fundo da mensagem
+
+[33mcommit 33b8fa071fd57144643a33bfc7f737bfbcdebcce[m
+Author: marcelomarcos.g9 <marcelomarcos.g9@gmail.com>
+Date:   Wed Dec 11 00:31:35 2024 +0000
+
+    Melhorias gerais no código
+
+[33mcommit 72d5b3cf6b15008c1ec2a71a8a359ef55207726e[m
+Author: Marcelo-Marcos <109537243+Marcelo-Marcos@users.noreply.github.com>
+Date:   Tue Dec 10 13:37:38 2024 -0300
+
+    Atualizar o style.css
+    
+    Aplicando o display none em métricas
+
+[33mcommit aa22fc2e1a8a7ce1cd30450b372679f6d5d36517[m
+Author: Marcelo-Marcos <109537243+Marcelo-Marcos@users.noreply.github.com>
+Date:   Tue Dec 10 13:32:44 2024 -0300
+
+    Atualizar o main.js
+    
+    Código alterado no celular, commit de segurança
+
+[33mcommit 1cd5f945b42584b5e9b58650f896fcbb7bf1fabc[m
+Author: Marcelo-Marcos <109537243+Marcelo-Marcos@users.noreply.github.com>
+Date:   Tue Dec 10 09:13:27 2024 -0300
+
+    Atualizar o main.js
+    
+    Criando o recuso de métricas no app
+
+[33mcommit 3b9771b7873d640f4e3da03903513b666bd8dcb5[m
+Author: marcelomarcos.g9 <marcelomarcos.g9@gmail.com>
+Date:   Tue Dec 10 04:28:01 2024 +0000
+
+    Criando mais recursos no aplicativo
+
+[33mcommit 742176eb874967ece0978901d0d678e95b67b76c[m
+Author: Marcelo-Marcos <109537243+Marcelo-Marcos@users.noreply.github.com>
+Date:   Mon Dec 9 23:22:14 2024 -0300
+
+    Atualizar o index.html
+    
+    Código modificado no editor do celular
+
+[33mcommit c6bb89e35593407e93c1bf365e6e644f7070c5c8[m
+Author: Marcelo-Marcos <109537243+Marcelo-Marcos@users.noreply.github.com>
+Date:   Mon Dec 9 23:21:07 2024 -0300
+
+    Atualizar código CSS
+    
+    editado no editor do celular
+
+[33mcommit adbe118898b7e166e71e6d2a62a17ba07059504f[m
+Author: marcelomarcos.g9 <marcelomarcos.g9@gmail.com>
+Date:   Mon Dec 9 21:02:23 2024 +0000
+
+    Modificando design
+
+[33mcommit 395c5caf3901a9bb8a2aebe07e395ab787a1a935[m
+Author: Marcelo Marcos <marcelomarcos.g9@gmail.com>
+Date:   Sun Dec 8 01:46:28 2024 -0300
+
+    Conclusão da cáculadora de IMC
+
+[33mcommit 480ed0b108073d1b9d1906853a5510f089e71eb1[m
+Author: Marcelo Marcos <marcelomarcos.g9@gmail.com>
+Date:   Thu Dec 5 23:04:28 2024 -0300
+
+    testando o git pull
+
+[33mcommit 66e97015e5399cf43ac1ad35e24328ee958748f2[m
+Author: marcelomarcos.g9 <marcelomarcos.g9@gmail.com>
+Date:   Thu Dec 5 23:54:02 2024 +0000
+
+    Projeto configurado no idx
+
+[33mcommit 70d9df391a3831bd7857c02c56a4fb1b0fcea718[m
+Author: marcelomarcos.g9 <marcelomarcos.g9@gmail.com>
+Date:   Thu Dec 5 23:14:39 2024 +0000
+
+    Projeto IDX
+
+[33mcommit e7cb5c0fd21ec76d0aed792fe0f2d485cd261846[m
+Author: marcelomarcos.g9 <marcelomarcos.g9@gmail.com>
+Date:   Thu Dec 5 23:06:02 2024 +0000
+
+    project idx
+
+[33mcommit 71ccd5cc3db44b628598ce1c24f1ae85448c2951[m
+Author: Marcelo Marcos <marcelomarcos.g9@gmail.com>
+Date:   Thu Dec 5 19:55:17 2024 -0300
+
+    criando o projeto
